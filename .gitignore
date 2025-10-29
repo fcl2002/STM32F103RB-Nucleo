@@ -1,0 +1,4 @@
+cmsis_*
+core_cm3.h
+stm32f10x.h
+system_stm32f10x.h
