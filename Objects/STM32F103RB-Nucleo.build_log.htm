@@ -27,7 +27,23 @@ Project File Date:  10/29/2025
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
-compiling main.c...
+RTE/Device/STM32F103R8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103R8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+pcf8574.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    ack1 = i2cbb_write_byte((uint8_t)((addr7 << 1) | 0u)); /* bit R/W = 0 (write) */
+                                       ~~~~~~^~~~  ~
+pcf8574.c(26): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    ack_addr = i2cbb_write_byte((uint8_t)((addr7 << 1) | 1u)); /* bit R/W = 1 (read) */
+                                           ~~~~~~^~~~  ~
+2 warnings generated.
+compiling pcf8574.c...
+compiling serial.c...
 io.c(34): warning: enumeration value 'IO_SPEED_50M' not explicitly handled in switch [-Wswitch-enum]
     switch (speed) {
             ^
@@ -39,20 +55,17 @@ io.c(137): warning: default label in switch which covers all enumeration values 
     ^
 3 warnings generated.
 compiling io.c...
-assembling startup_stm32f10x_md.s...
 compiling delay.c...
-compiling serial.c...
-RTE/Device/STM32F103R8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+compiling i2c_bb.c...
+assembling startup_stm32f10x_md.s...
+main.c(9): warning: unused variable 'val' [-Wunused-variable]
+    uint8_t val = 0xFF;
             ^
-RTE/Device/STM32F103R8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
-    ^
 1 warning generated.
-compiling system_stm32f10x.c...
+compiling main.c...
 linking...
-Program Size: Code=1388 RO-data=252 RW-data=0 ZI-data=1632  
-".\Objects\STM32F103RB-Nucleo.axf" - 0 Error(s), 4 Warning(s).
+Program Size: Code=1784 RO-data=252 RW-data=0 ZI-data=1632  
+".\Objects\STM32F103RB-Nucleo.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -83,7 +96,7 @@ Package Vendor: Keil
       Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

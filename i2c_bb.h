@@ -30,12 +30,12 @@
 #define I2CBB_SDA_PIN    7u
 
 /* --------- Temporização (em microssegundos) --------- */
-#define I2CBB_T_LOW_US    5u   /* t_LOW  >= 4.7 us (Std-mode)  */
-#define I2CBB_T_HIGH_US   5u   /* t_HIGH >= 4.0 us (Std-mode)  */
+#define I2CBB_T_LOW_US    15u
+#define I2CBB_T_HIGH_US   15u
 #define I2CBB_T_SU_STA_US 5u   /* setup START   */
 #define I2CBB_T_HD_STA_US 5u   /* hold  START   */
 #define I2CBB_T_SU_STO_US 5u   /* setup STOP    */
-#define I2CBB_T_SU_DAT_US 1u   /* data setup    */
+#define I2CBB_T_SU_DAT_US 2u   /* data setup    */
 #define I2CBB_T_HD_DAT_US 0u   /* data hold (0: garantido por bordas) */
 
 /* --------- Convenções de ACK/NACK --------- */

@@ -413,6 +413,26 @@
               <FileType>5</FileType>
               <FilePath>.\serial.h</FilePath>
             </File>
+            <File>
+              <FileName>i2c_bb.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\i2c_bb.h</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_bb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\i2c_bb.c</FilePath>
+            </File>
+            <File>
+              <FileName>pcf8574.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\pcf8574.h</FilePath>
+            </File>
+            <File>
+              <FileName>pcf8574.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\pcf8574.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

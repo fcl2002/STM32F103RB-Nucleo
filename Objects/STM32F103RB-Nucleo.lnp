@@ -2,6 +2,8 @@
 ".\objects\io.o"
 ".\objects\delay.o"
 ".\objects\serial.o"
+".\objects\i2c_bb.o"
+".\objects\pcf8574.o"
 ".\objects\startup_stm32f10x_md.o"
 ".\objects\system_stm32f10x.o"
 ".\objects\main.o"

@@ -43,8 +43,8 @@ void i2cbb_init(void)
 {
     /* Configura SCL e SDA como saída open-drain 2 MHz, nível inicial “alto” (release).
      * Observação: idealmente usar pull-ups externos (2.2k–10k). */
-    io_init_simple(I2CBB_SCL_PORT, I2CBB_SCL_PIN, IO_FUNC_OUTPUT_OD, IO_SPEED_2M, IO_NOPULL, IO_LEVEL_HIGH);
-    io_init_simple(I2CBB_SDA_PORT, I2CBB_SDA_PIN, IO_FUNC_OUTPUT_OD, IO_SPEED_2M, IO_NOPULL, IO_LEVEL_HIGH);
+    io_init_simple(I2CBB_SCL_PORT, I2CBB_SCL_PIN, IO_FUNC_OUTPUT_OD, IO_SPEED_2M, IO_PULLUP, IO_LEVEL_HIGH);
+    io_init_simple(I2CBB_SDA_PORT, I2CBB_SDA_PIN, IO_FUNC_OUTPUT_OD, IO_SPEED_2M, IO_PULLUP, IO_LEVEL_HIGH);
 
     /* Garante barramento livre: SCL=1, SDA=1 */
     scl_release();
