@@ -27,7 +27,9 @@ Project File Date:  10/30/2025
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
+compiling delay.c...
 assembling startup_stm32f10x_md.s...
+compiling serial.c...
 pcf8574.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     ack1 = i2cbb_write_byte((uint8_t)((addr7 << 1) | 0u)); /* bit R/W = 0 (write) */
                                        ~~~~~~^~~~  ~
@@ -36,9 +38,7 @@ pcf8574.c(26): warning: implicit conversion changes signedness: 'int' to 'unsign
                                            ~~~~~~^~~~  ~
 2 warnings generated.
 compiling pcf8574.c...
-compiling delay.c...
 compiling main.c...
-compiling serial.c...
 compiling i2c_bb.c...
 io.c(34): warning: enumeration value 'IO_SPEED_50M' not explicitly handled in switch [-Wswitch-enum]
     switch (speed) {
@@ -60,7 +60,7 @@ __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9}
 1 warning generated.
 compiling system_stm32f10x.c...
 linking...
-Program Size: Code=1460 RO-data=252 RW-data=0 ZI-data=1632  
+Program Size: Code=1536 RO-data=252 RW-data=0 ZI-data=1632  
 ".\Objects\STM32F103RB-Nucleo.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -88,11 +88,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Include file:  RTE_Driver\Config\RTE_Device.h
-      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

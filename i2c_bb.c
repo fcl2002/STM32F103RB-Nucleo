@@ -93,7 +93,6 @@ void i2cbb_write_bit(uint8_t bit)
     scl_release();
     (void)wait_scl_high_with_timeout();
     delay_us(I2CBB_T_HIGH_US);
-    delay_ms(2000);
 
     scl_low();
     delay_us(I2CBB_T_LOW_US);
@@ -106,16 +105,20 @@ uint8_t i2cbb_read_bit(void)
 
     sda_release(); /* libera SDA para o slave dirigir */
     delay_us(I2CBB_T_SU_DAT_US);
-
+    delay_ms(2000);
+    
     scl_release();
     (void)wait_scl_high_with_timeout();
     delay_us(I2CBB_T_HIGH_US / 2u); /* meio período antes da amostragem */
-
+    delay_ms(2000);
+    
     bit = read_sda();
-
+    
+    delay_ms(2000);
     delay_us((I2CBB_T_HIGH_US + 1u) / 2u); /* completa o high */
     scl_low();
     delay_us(I2CBB_T_LOW_US);
+    delay_ms(2000);
 
     return bit;
 }
