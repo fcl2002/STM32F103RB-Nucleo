@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.31.0.0
 Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Matheus Galdino, UNIFEI, LIC=----
+License Information: Fernando Lasmar, Sorbonne, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.31.0.0
@@ -21,20 +21,13 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
 Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
-D:\EI\EI7\Microcontroleur_2\TP\TP_GIT\STM32F103RB-Nucleo\STM32F103RB-Nucleo.uvprojx
-Project File Date:  10/29/2025
+C:\Micro_TPs\STM32F103RB-Nucleo\STM32F103RB-Nucleo.uvprojx
+Project File Date:  10/30/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
-RTE/Device/STM32F103R8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
-            ^
-RTE/Device/STM32F103R8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
-    ^
-1 warning generated.
-compiling system_stm32f10x.c...
+assembling startup_stm32f10x_md.s...
 pcf8574.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     ack1 = i2cbb_write_byte((uint8_t)((addr7 << 1) | 0u)); /* bit R/W = 0 (write) */
                                        ~~~~~~^~~~  ~
@@ -43,7 +36,10 @@ pcf8574.c(26): warning: implicit conversion changes signedness: 'int' to 'unsign
                                            ~~~~~~^~~~  ~
 2 warnings generated.
 compiling pcf8574.c...
+compiling delay.c...
+compiling main.c...
 compiling serial.c...
+compiling i2c_bb.c...
 io.c(34): warning: enumeration value 'IO_SPEED_50M' not explicitly handled in switch [-Wswitch-enum]
     switch (speed) {
             ^
@@ -55,17 +51,17 @@ io.c(137): warning: default label in switch which covers all enumeration values 
     ^
 3 warnings generated.
 compiling io.c...
-compiling delay.c...
-compiling i2c_bb.c...
-assembling startup_stm32f10x_md.s...
-main.c(9): warning: unused variable 'val' [-Wunused-variable]
-    uint8_t val = 0xFF;
+RTE/Device/STM32F103R8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
             ^
+RTE/Device/STM32F103R8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
 1 warning generated.
-compiling main.c...
+compiling system_stm32f10x.c...
 linking...
-Program Size: Code=1784 RO-data=252 RW-data=0 ZI-data=1632  
-".\Objects\STM32F103RB-Nucleo.axf" - 0 Error(s), 7 Warning(s).
+Program Size: Code=1460 RO-data=252 RW-data=0 ZI-data=1632  
+".\Objects\STM32F103RB-Nucleo.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -84,8 +80,8 @@ Package Vendor: Keil
 <h2>Collection of Component include folders:</h2>
   .\RTE\Device\STM32F103R8
   .\RTE\_Target_1
-  C:\Users\Matheus\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
-  C:\Users\Matheus\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+  C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 

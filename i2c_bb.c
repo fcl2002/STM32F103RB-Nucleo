@@ -60,10 +60,10 @@ void i2cbb_start(void)
     sda_release();
     scl_release();
     delay_us(I2CBB_T_SU_STA_US);
-
+    
     sda_low();
     delay_us(I2CBB_T_HD_STA_US);
-
+    
     scl_low();
     delay_us(I2CBB_T_LOW_US);
 }
@@ -73,11 +73,11 @@ void i2cbb_stop(void)
     /* STOP: SDA 0->1 enquanto SCL=1 */
     sda_low();
     delay_us(I2CBB_T_SU_STO_US);
-
+    
     scl_release();
     (void)wait_scl_high_with_timeout();
     delay_us(I2CBB_T_HIGH_US);
-
+    
     sda_release();
     delay_us(I2CBB_T_SU_STO_US);
 }
@@ -93,6 +93,7 @@ void i2cbb_write_bit(uint8_t bit)
     scl_release();
     (void)wait_scl_high_with_timeout();
     delay_us(I2CBB_T_HIGH_US);
+    delay_ms(2000);
 
     scl_low();
     delay_us(I2CBB_T_LOW_US);
