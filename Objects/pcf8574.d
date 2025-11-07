@@ -1,12 +1,8 @@
 ./objects/pcf8574.o: pcf8574.c pcf8574.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h i2c_bb.h \
-  C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h \
-  RTE\_Target_1\RTE_Components.h \
-  C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h \
-  C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h \
-  C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h \
-  C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h i2c_bb.h stm32f10x.h \
+  RTE\_Target_1\RTE_Components.h core_cm3.h cmsis_version.h \
+  cmsis_compiler.h \
+  C:\Users\Matheus\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
-  C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h system_stm32f10x.h \
   io.h delay.h
