@@ -9,6 +9,8 @@
 #define ONEWIRE_DQ_PIN    4u   /* SIGNAL ONEWIRE  (TIM3_CH1 futuramente) */
 #define ONEWIRE_SPY_PIN   5u   /* SIGNAL ESPION_INSTANT_LECTURE (TIM3_CH2 futuramente) */
 
+/* -------- OneWire timings (µs) conforme DS18B20 Fig.12–14 -------- */
+#define OW_TREC_US        2u    /* Recovery time ≥1 µs entre slots          */
 /* -------- tempos em µs (ajuste se o prof pedir outros) -------- */
 
 /* Reset + presence */
@@ -16,11 +18,16 @@
 #define OW_RESET_TSAMPLE   550u   /* instante para amostrar presença */
 #define OW_RESET_TEND      960u   /* fim do motivo                */
 
-/* Slots de escrita/leitura */
-#define OW_SLOT_TLOW_1     6u     /* master LOW curto para '1'    */
-#define OW_SLOT_TLOW_0     60u    /* master LOW longo para '0'    */
-#define OW_SLOT_TSAMPLE    15u    /* amostragem no meio do slot   */
-#define OW_SLOT_TEND       60u    /* tamanho total do slot        */
+/* Write slots (slot ≥60 µs) */
+#define OW_W1_TLOW         10u  /* write '1': LOW curto, solta ≤15 µs        */
+#define OW_W1_TEND         65u  /* fim do slot (≥60)                         */
+#define OW_W0_TLOW         60u  /* write '0': LOW ≈60 µs                     */
+#define OW_W0_TEND         65u  /* fim do slot (≥60)                         */
+
+/* Read slot (Fig.13–14): TINIT pequeno, sample em 15 µs, slot ≥60 µs */
+#define OW_R_TINIT          3u  /* ≥1 µs e “pequeno”                         */
+#define OW_R_TSAMPLE       15u  /* master samples at 15 µs                   */
+#define OW_R_TEND          65u  /* slot (≥60 µs)                             */
 
 
 /* 2.1 — Configuração dos pinos:
@@ -81,5 +88,16 @@ void TIM3_IRQHandler(void);
 void RESET_ONEWIRE(void);
 void ENVOI_BIT_ONEWIRE(uint8_t bit_a_envoyer);
 uint8_t LECTURE_BIT_ONEWIRE(void);
+void ENVOI_OCTET_ONEWIRE(uint8_t octet);
+uint8_t LECTURE_OCTET_ONEWIRE(void);
+
+void SKIP_ROM(void);
+void CONVERT_T(void);
+void READ_SCRATCHPAD(void);
+
+void READ_POWER_SUPPLY_CMD(void);    /* envia 0xB4 */
+uint8_t READ_POWER_SUPPLY_BIT(void); /* RESET+0xCC+0xB4+READ → retorna 1 (VDD) ou 0 (parasita) */
+
+
 
 #endif /* ONEWIRE_H */

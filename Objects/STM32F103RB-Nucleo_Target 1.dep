@@ -1,118 +1,5 @@
 Dependencies for Project 'STM32F103RB-Nucleo', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6140000::V6.14::ARMCLANG
-<<<<<<< Updated upstream
-F (.\io.h)(0x690E5EB8)()
-F (.\io.c)(0x690E5EB8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/ferna/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/ferna/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/io.o -MD)
-I (io.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61ADCDBE)
-I (RTE\_Target_1\RTE_Components.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED6A694)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83A172)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D5D9C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D5DC8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
-F (.\delay.h)(0x690E5EB8)()
-F (.\delay.c)(0x690E5EB8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/ferna/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/ferna/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/delay.o -MD)
-I (delay.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61ADCDBE)
-I (RTE\_Target_1\RTE_Components.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED6A694)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83A172)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D5D9C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D5DC8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
-F (.\serial.c)(0x690E5EB8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/ferna/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/ferna/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/serial.o -MD)
-I (serial.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61ADCDBE)
-I (RTE\_Target_1\RTE_Components.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED6A694)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83A172)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D5D9C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D5DC8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
-F (.\serial.h)(0x690E5EB8)()
-F (.\i2c_bb.h)(0x690E5EB8)()
-F (.\i2c_bb.c)(0x690E5EB8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/ferna/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/ferna/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/i2c_bb.o -MD)
-I (i2c_bb.h)(0x690E5EB8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED6A694)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61ADCDBE)
-I (RTE\_Target_1\RTE_Components.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83A172)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D5D9C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D5DC8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
-I (io.h)(0x690E5EB8)
-I (delay.h)(0x690E5EB8)
-F (.\pcf8574.h)(0x690E5EB8)()
-F (.\pcf8574.c)(0x690E5EB8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/ferna/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/ferna/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/pcf8574.o -MD)
-I (pcf8574.h)(0x690E5EB8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED6A694)
-I (i2c_bb.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61ADCDBE)
-I (RTE\_Target_1\RTE_Components.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83A172)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D5D9C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D5DC8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
-I (io.h)(0x690E5EB8)
-I (delay.h)(0x690E5EB8)
-F (.\main.c)(0x690F6814)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/ferna/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/ferna/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/main.o -MD)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61ADCDBE)
-I (RTE\_Target_1\RTE_Components.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED6A694)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83A172)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D5D9C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D5DC8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
-I (onewire.h)(0x690F6757)
-I (io.h)(0x690E5EB8)
-I (delay.h)(0x690E5EB8)
-F (.\onewire.h)(0x690F6757)()
-F (.\onewire.c)(0x690F67B6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/ferna/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/ferna/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/onewire.o -MD)
-I (onewire.h)(0x690F6757)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61ADCDBE)
-I (RTE\_Target_1\RTE_Components.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED6A694)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83A172)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D5D9C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D5DC8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
-I (io.h)(0x690E5EB8)
-F (RTE\Device\STM32F103R8\RTE_Device.h)(0x690E5EB8)()
-F (RTE\Device\STM32F103R8\startup_stm32f10x_md.s)(0x690E5EB8)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/ferna/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/ferna/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 531" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_md.o)
-F (RTE\Device\STM32F103R8\system_stm32f10x.c)(0x690E5EB8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/ferna/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/ferna/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/system_stm32f10x.o -MD)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61ADCDBE)
-I (RTE\_Target_1\RTE_Components.h)(0x690E5EB8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED6A694)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F6BD2)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83A172)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F6BD2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D5D9C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D5DC8)
-I (C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
-=======
 F (.\io.h)(0x690C62BD)()
 F (.\io.c)(0x690C62BD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/Matheus/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Matheus/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/io.o -MD)
 I (io.h)(0x690C62BD)
@@ -183,7 +70,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (system_stm32f10x.h)(0x61ADCDBE)
 I (io.h)(0x690C62BD)
 I (delay.h)(0x690C62BD)
-F (.\main.c)(0x690F749C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/Matheus/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Matheus/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/main.o -MD)
+F (.\main.c)(0x690FB38B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/Matheus/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Matheus/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/main.o -MD)
 I (stm32f10x.h)(0x68D08BCC)
 I (RTE\_Target_1\RTE_Components.h)(0x690C62BD)
 I (core_cm3.h)(0x5E8F2582)
@@ -194,12 +81,13 @@ I (C:\Users\Matheus\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\c
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (system_stm32f10x.h)(0x61ADCDBE)
-I (onewire.h)(0x690F72DA)
+I (onewire.h)(0x690FADBF)
 I (io.h)(0x690C62BD)
 I (delay.h)(0x690C62BD)
-F (.\onewire.h)(0x690F72DA)()
-F (.\onewire.c)(0x690F730A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/Matheus/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Matheus/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/onewire.o -MD)
-I (onewire.h)(0x690F72DA)
+I (serial.h)(0x690C62BD)
+F (.\onewire.h)(0x690FADBF)()
+F (.\onewire.c)(0x690FADB5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103R8-I./RTE/_Target_1-IC:/Users/Matheus/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Matheus/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/onewire.o -MD)
+I (onewire.h)(0x690FADBF)
 I (stm32f10x.h)(0x68D08BCC)
 I (RTE\_Target_1\RTE_Components.h)(0x690C62BD)
 I (core_cm3.h)(0x5E8F2582)
@@ -225,4 +113,3 @@ I (C:\Users\Matheus\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\c
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (C:\Users\Matheus\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
->>>>>>> Stashed changes

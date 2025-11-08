@@ -177,15 +177,19 @@ void ENVOI_BIT_ONEWIRE(uint8_t bit_a_envoyer)
     onewire_clear_flags();
 
     if (bit_a_envoyer) {
-        /* WRITE '1' — LOW ~6 µs, amostra em 15 µs (irrelevante aqui), slot 60 µs */
-        init_motif(/*D1=*/6, /*D2=*/15, /*D3=*/60);
+        /* WRITE '1': LOW curto, solta ≤15 µs; slot ≥60 µs */
+        init_motif(/*D1=*/OW_W1_TLOW,
+                   /*D2=*/OW_R_TSAMPLE,     /* não usado p/ write, ok */
+                   /*D3=*/OW_W1_TEND);
     } else {
-        /* WRITE '0' — LOW ~60 µs, amostra em 15 µs (irrelevante), slot 60 µs */
-        init_motif(/*D1=*/60, /*D2=*/15, /*D3=*/60);
+        /* WRITE '0': manter LOW ~60 µs; slot ≥60 µs */
+        init_motif(/*D1=*/OW_W0_TLOW,
+                   /*D2=*/OW_R_TSAMPLE,     /* não usado p/ write, ok */
+                   /*D3=*/OW_W0_TEND);
     }
 
     onewire_wait_motif_done();
-    delay_us(1000);
+    delay_us(OW_TREC_US);  /* TREC ≥1 µs */
 }
 
 /* LECTURE_BIT_ONEWIRE: master puxa curto e amostra em ~15 µs.
@@ -194,13 +198,66 @@ uint8_t LECTURE_BIT_ONEWIRE(void)
 {
     onewire_clear_flags();
 
-    /* READ SLOT — LOW ~6 µs, amostra em 15 µs, slot 60 µs */
-    init_motif(/*D1=*/6, /*D2=*/15, /*D3=*/60);
+    /* READ: “kick” curto (≥1 µs), sample @15 µs, slot ≥60 µs */
+    init_motif(/*D1=*/OW_R_TINIT,
+               /*D2=*/OW_R_TSAMPLE,
+               /*D3=*/OW_R_TEND);
     onewire_wait_motif_done();
 
-    /* etat_one_wire foi atualizado na ISR em D2 */
+    /* etat_one_wire foi capturado na ISR no instante D2 */
     uint8_t bit_lu = (etat_one_wire ? 1u : 0u);
 
-    delay_us(1000);
+    delay_us(OW_TREC_US);  /* TREC ≥1 µs */
     return bit_lu;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Envoi d’un octet complet (bloquant)                                        */
+/*  - bit 0 envoyé en premier (LSB-first, conforme au protocole DS18B20)      */
+/* -------------------------------------------------------------------------- */
+void ENVOI_OCTET_ONEWIRE(uint8_t octet)
+{
+    for (uint8_t i = 0; i < 8; i++) {
+        uint8_t bit = (octet >> i) & 0x01u;  /* bit LSB -> MSB */
+        ENVOI_BIT_ONEWIRE(bit);
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Lecture d’un octet complet (bloquant)                                      */
+/*  - bit 0 reçu en premier (LSB-first)                                       */
+/* -------------------------------------------------------------------------- */
+uint8_t LECTURE_OCTET_ONEWIRE(void)
+{
+    uint8_t octet = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        uint8_t bit = LECTURE_BIT_ONEWIRE();
+        if (bit) {
+            octet |= (1u << i);   /* reconstrução LSB-first */
+        }
+    }
+    return octet;
+}
+
+void SKIP_ROM(void)        { ENVOI_OCTET_ONEWIRE(0xCC); }
+void CONVERT_T(void)       { ENVOI_OCTET_ONEWIRE(0x44); }
+void READ_SCRATCHPAD(void) { ENVOI_OCTET_ONEWIRE(0xBE); }
+/* ========================================================================== */
+
+/* Envia o comando 0xB4 (Read Power Supply) */
+void READ_POWER_SUPPLY_CMD(void)
+{
+    ENVOI_OCTET_ONEWIRE(0xB4);
+}
+
+/* Sequência completa: RESET → SKIP ROM (0xCC) → 0xB4 → ler 1 bit.
+   Esperado: 1 (VDD externo). */
+uint8_t READ_POWER_SUPPLY_BIT(void)
+{
+    RESET_ONEWIRE();
+    delay_us(20);             /* pequeno guard time entre reset e comando */
+    SKIP_ROM();               /* 0xCC */
+    READ_POWER_SUPPLY_CMD();  /* 0xB4 */
+    return LECTURE_BIT_ONEWIRE();
 }

@@ -3,13 +3,9 @@
 <title>Static Call Graph - [.\Objects\STM32F103RB-Nucleo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\STM32F103RB-Nucleo.axf</H1><HR>
-<<<<<<< Updated upstream
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Sat Nov  8 16:56:28 2025
-=======
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Sat Nov  8 17:49:52 2025
->>>>>>> Stashed changes
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Sat Nov  8 22:18:07 2025
 <BR><P>
-<H3>Maximum Stack Usage =         96 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         88 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; init_pins_onewire &rArr; io_init_simple &rArr; io_config_ex_raw &rArr; io_config_raw
 <P>
@@ -111,15 +107,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[5e]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[65]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[5f]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
-=======
-<P><STRONG><a name="[62]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
-
-<P><STRONG><a name="[63]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
->>>>>>> Stashed changes
+<P><STRONG><a name="[66]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[3b]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -127,146 +117,78 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[60]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
-=======
-<P><STRONG><a name="[64]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
->>>>>>> Stashed changes
+<P><STRONG><a name="[67]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[3f]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[61]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[68]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[62]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
+<P><STRONG><a name="[69]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
 
-<P><STRONG><a name="[63]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[6a]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[64]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[6b]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[65]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[6c]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[66]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[6d]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[67]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
+<P><STRONG><a name="[6e]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
 
-<P><STRONG><a name="[68]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[6f]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[69]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[70]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[6a]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
+<P><STRONG><a name="[71]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
 
-<P><STRONG><a name="[6b]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
+<P><STRONG><a name="[72]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
 
-<P><STRONG><a name="[6c]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[73]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[6d]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[74]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[6e]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[75]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[6f]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[76]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[70]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[77]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[71]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[78]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
-<P><STRONG><a name="[72]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
+<P><STRONG><a name="[79]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
 
-<P><STRONG><a name="[73]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[7a]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[74]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[7b]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[75]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
-=======
-<P><STRONG><a name="[65]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
-
-<P><STRONG><a name="[66]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
-
-<P><STRONG><a name="[67]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
-
-<P><STRONG><a name="[68]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
-
-<P><STRONG><a name="[69]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
-
-<P><STRONG><a name="[6a]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
-
-<P><STRONG><a name="[6b]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
-
-<P><STRONG><a name="[6c]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
-
-<P><STRONG><a name="[6d]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
-
-<P><STRONG><a name="[6e]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
-
-<P><STRONG><a name="[6f]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
-
-<P><STRONG><a name="[70]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
-
-<P><STRONG><a name="[71]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
-
-<P><STRONG><a name="[72]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
-
-<P><STRONG><a name="[73]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
-
-<P><STRONG><a name="[74]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
-
-<P><STRONG><a name="[75]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
-
-<P><STRONG><a name="[76]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
-
-<P><STRONG><a name="[77]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
-
-<P><STRONG><a name="[78]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
-
-<P><STRONG><a name="[79]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
->>>>>>> Stashed changes
+<P><STRONG><a name="[7c]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
 <P><STRONG><a name="[44]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[76]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[7d]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[77]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[7e]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[78]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[7f]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[79]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[80]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[7a]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[81]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[7b]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[82]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[7c]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
-=======
-<P><STRONG><a name="[7a]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
-
-<P><STRONG><a name="[7b]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
-
-<P><STRONG><a name="[7c]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
-
-<P><STRONG><a name="[7d]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
-
-<P><STRONG><a name="[7e]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
-
-<P><STRONG><a name="[7f]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
-
-<P><STRONG><a name="[80]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
->>>>>>> Stashed changes
+<P><STRONG><a name="[83]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[39]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[7d]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
-=======
-<P><STRONG><a name="[81]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
->>>>>>> Stashed changes
+<P><STRONG><a name="[84]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[3c]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -279,25 +201,17 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[7e]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
-=======
-<P><STRONG><a name="[82]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
->>>>>>> Stashed changes
+<P><STRONG><a name="[85]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[40]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; init_pins_onewire &rArr; io_init_simple &rArr; io_config_ex_raw &rArr; io_config_raw
 </UL>
 <BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[7f]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
-=======
-<P><STRONG><a name="[83]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
->>>>>>> Stashed changes
+<P><STRONG><a name="[86]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[48]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -307,11 +221,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[80]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
-=======
-<P><STRONG><a name="[84]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
->>>>>>> Stashed changes
+<P><STRONG><a name="[87]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[45]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
@@ -517,19 +427,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[81]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[88]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[82]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[89]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[83]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
-=======
-<P><STRONG><a name="[85]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
-
-<P><STRONG><a name="[86]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
-
-<P><STRONG><a name="[87]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
->>>>>>> Stashed changes
+<P><STRONG><a name="[8a]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[3d]"></a>__user_setup_stackheap</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -550,321 +452,221 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[84]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
-=======
-<P><STRONG><a name="[88]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
->>>>>>> Stashed changes
+<P><STRONG><a name="[8b]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[47]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[85]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
-=======
-<P><STRONG><a name="[89]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
->>>>>>> Stashed changes
+<P><STRONG><a name="[8c]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[46]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[86]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[8d]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[87]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[8e]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[88]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[8f]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[49]"></a>RESET_ONEWIRE</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, onewire.o(.text.RESET_ONEWIRE))
-=======
-<P><STRONG><a name="[8a]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[49]"></a>ENVOI_BIT_ONEWIRE</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, onewire.o(.text.ENVOI_BIT_ONEWIRE))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = ENVOI_BIT_ONEWIRE &rArr; init_motif
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onewire_wait_motif_done
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onewire_clear_flags
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_motif
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ENVOI_OCTET_ONEWIRE
+</UL>
 
-<P><STRONG><a name="[8b]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[4e]"></a>ENVOI_OCTET_ONEWIRE</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, onewire.o(.text.ENVOI_OCTET_ONEWIRE))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ENVOI_OCTET_ONEWIRE &rArr; ENVOI_BIT_ONEWIRE &rArr; init_motif
+</UL>
+<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ENVOI_BIT_ONEWIRE
+</UL>
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_test_send_byte_a4_once
+</UL>
 
-<P><STRONG><a name="[8c]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
-
-<P><STRONG><a name="[49]"></a>RESET_ONEWIRE</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, onewire.o(.text.RESET_ONEWIRE))
->>>>>>> Stashed changes
+<P><STRONG><a name="[4f]"></a>RESET_ONEWIRE</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, onewire.o(.text.RESET_ONEWIRE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = RESET_ONEWIRE &rArr; init_motif
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onewire_wait_motif_done
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onewire_clear_flags
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_motif
-<<<<<<< Updated upstream
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-</UL>
-<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-=======
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_test_reset_once
->>>>>>> Stashed changes
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_test_send_byte_a4_once
 </UL>
 
 <P><STRONG><a name="[35]"></a>SystemInit</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, system_stm32f10x.o(.text.SystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SystemInit &rArr; SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(.text)
 </UL>
 <P><STRONG><a name="[27]"></a>TIM3_IRQHandler</STRONG> (Thumb, 118 bytes, Stack size 0 bytes, onewire.o(.text.TIM3_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<<<<<<< Updated upstream
-<P><STRONG><a name="[4d]"></a>delay_ms</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, delay.o(.text.delay_ms))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_ms
-</UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
-=======
-<P><STRONG><a name="[52]"></a>delay_ms</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, delay.o(.text.delay_ms))
+<P><STRONG><a name="[54]"></a>delay_ms</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, delay.o(.text.delay_ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
->>>>>>> Stashed changes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[50]"></a>delay_us</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, delay.o(.text.delay_us))
-<BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_low_both_us
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_high_both_us
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-=======
 <P><STRONG><a name="[4d]"></a>delay_us</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, delay.o(.text.delay_us))
-<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_low_both_us
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_high_both_us
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
->>>>>>> Stashed changes
+<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ENVOI_BIT_ONEWIRE
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_low_both_us
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_high_both_us
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_test_send_byte_a4_once
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 </UL>
 
 <P><STRONG><a name="[4b]"></a>init_motif</STRONG> (Thumb, 180 bytes, Stack size 8 bytes, onewire.o(.text.init_motif))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = init_motif
 </UL>
-<BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
+<BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ENVOI_BIT_ONEWIRE
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[51]"></a>init_pins_onewire</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, onewire.o(.text.init_pins_onewire))
+<P><STRONG><a name="[55]"></a>init_pins_onewire</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, onewire.o(.text.init_pins_onewire))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = init_pins_onewire &rArr; io_init_simple &rArr; io_config_ex_raw &rArr; io_config_raw
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
-=======
-<P><STRONG><a name="[53]"></a>init_pins_onewire</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, onewire.o(.text.init_pins_onewire))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = init_pins_onewire &rArr; io_init_simple &rArr; io_config_ex_raw &rArr; io_config_raw
-</UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
->>>>>>> Stashed changes
+<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[54]"></a>init_timer</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, onewire.o(.text.init_timer))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = init_timer
-</UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
-=======
-<P><STRONG><a name="[56]"></a>init_timer</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, onewire.o(.text.init_timer))
+<P><STRONG><a name="[58]"></a>init_timer</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, onewire.o(.text.init_timer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = init_timer &rArr; _tim3_enable_irq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tim3_enable_irq
->>>>>>> Stashed changes
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tim3_enable_irq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[5a]"></a>io_build_out_cfg</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, io.o(.text.io_build_out_cfg))
-<BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
+<P><STRONG><a name="[5d]"></a>io_build_out_cfg</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, io.o(.text.io_build_out_cfg))
+<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
 </UL>
 
-<P><STRONG><a name="[56]"></a>io_config_ex_raw</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, io.o(.text.io_config_ex_raw))
+<P><STRONG><a name="[59]"></a>io_config_ex_raw</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, io.o(.text.io_config_ex_raw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = io_config_ex_raw &rArr; io_config_raw
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_raw
+<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_raw
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
 </UL>
 
-<P><STRONG><a name="[57]"></a>io_config_raw</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, io.o(.text.io_config_raw))
+<P><STRONG><a name="[5a]"></a>io_config_raw</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, io.o(.text.io_config_raw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = io_config_raw
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io__cr_reg
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io__cr_reg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_ex_raw
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_ex_raw
 </UL>
 
-<P><STRONG><a name="[52]"></a>io_enable_port_clock</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, io.o(.text.io_enable_port_clock))
+<P><STRONG><a name="[56]"></a>io_enable_port_clock</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, io.o(.text.io_enable_port_clock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = io_enable_port_clock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io__rcc_gpio_en_bit
+<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io__rcc_gpio_en_bit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_pins_onewire
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_pins_onewire
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
 </UL>
 
-<P><STRONG><a name="[53]"></a>io_init_simple</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, io.o(.text.io_init_simple))
+<P><STRONG><a name="[57]"></a>io_init_simple</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, io.o(.text.io_init_simple))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = io_init_simple &rArr; io_config_ex_raw &rArr; io_config_raw
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_ex_raw
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_build_out_cfg
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_ex_raw
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_build_out_cfg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_pins_onewire
-</UL>
-
-<P><STRONG><a name="[5d]"></a>io_write</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, io.o(.text.io_write))
-<BR><BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_pins_onewire
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
 </UL>
 
-<P><STRONG><a name="[41]"></a>main</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = main &rArr; init_pins_onewire &rArr; io_init_simple &rArr; io_config_ex_raw &rArr; io_config_raw
-</UL>
-<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_pins_onewire
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_low_both_us
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_high_both_us
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_write
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
-=======
-<P><STRONG><a name="[5b]"></a>io_build_out_cfg</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, io.o(.text.io_build_out_cfg))
-<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
-</UL>
-
-<P><STRONG><a name="[57]"></a>io_config_ex_raw</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, io.o(.text.io_config_ex_raw))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = io_config_ex_raw &rArr; io_config_raw
-</UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_raw
-</UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
-</UL>
-
-<P><STRONG><a name="[58]"></a>io_config_raw</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, io.o(.text.io_config_raw))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = io_config_raw
-</UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io__cr_reg
-</UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_ex_raw
-</UL>
-
-<P><STRONG><a name="[54]"></a>io_enable_port_clock</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, io.o(.text.io_enable_port_clock))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = io_enable_port_clock
-</UL>
-<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io__rcc_gpio_en_bit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_pins_onewire
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
-</UL>
-
-<P><STRONG><a name="[55]"></a>io_init_simple</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, io.o(.text.io_init_simple))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = io_init_simple &rArr; io_config_ex_raw &rArr; io_config_raw
-</UL>
-<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_ex_raw
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_build_out_cfg
-</UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_pins_onewire
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
-</UL>
-
-<P><STRONG><a name="[5e]"></a>io_write</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, io.o(.text.io_write))
-<BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_set
-</UL>
-
-<P><STRONG><a name="[41]"></a>main</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, main.o(.text.main))
+<P><STRONG><a name="[41]"></a>main</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = main &rArr; init_pins_onewire &rArr; io_init_simple &rArr; io_config_ex_raw &rArr; io_config_raw
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_pins_onewire
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_low_both_us
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_high_both_us
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_test_reset_once
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
->>>>>>> Stashed changes
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_pins_onewire
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_low_both_us
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scope_mark_high_both_us
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_test_send_byte_a4_once
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial2_puts
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial2_init
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
 <P><STRONG><a name="[4a]"></a>onewire_clear_flags</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, onewire.o(.text.onewire_clear_flags))
-<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
+<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ENVOI_BIT_ONEWIRE
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
 </UL>
 
 <P><STRONG><a name="[4c]"></a>onewire_wait_motif_done</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, onewire.o(.text.onewire_wait_motif_done))
-<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
+<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ENVOI_BIT_ONEWIRE
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
+</UL>
+
+<P><STRONG><a name="[5f]"></a>serial2_init</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, serial.o(.text.serial2_init))
+<BR><BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[64]"></a>serial2_putc</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, serial.o(.text.serial2_putc))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial2_puts
+</UL>
+
+<P><STRONG><a name="[60]"></a>serial2_puts</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, serial.o(.text.serial2_puts))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = serial2_puts
+</UL>
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial2_putc
+</UL>
+<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_test_send_byte_a4_once
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<<<<<<< Updated upstream
-<P><STRONG><a name="[58]"></a>io__cr_reg</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, io.o(.text.io__cr_reg))
-<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_raw
+<P><STRONG><a name="[5b]"></a>io__cr_reg</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, io.o(.text.io__cr_reg))
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_raw
 </UL>
 
-<P><STRONG><a name="[59]"></a>io__rcc_gpio_en_bit</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, io.o(.text.io__rcc_gpio_en_bit))
-<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
+<P><STRONG><a name="[5c]"></a>io__rcc_gpio_en_bit</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, io.o(.text.io__rcc_gpio_en_bit))
+<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
 </UL>
 
-<P><STRONG><a name="[5c]"></a>scope_mark_high_both_us</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(.text.scope_mark_high_both_us))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = scope_mark_high_both_us
-</UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
-=======
-<P><STRONG><a name="[59]"></a>io__cr_reg</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, io.o(.text.io__cr_reg))
-<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_config_raw
-</UL>
-
-<P><STRONG><a name="[5a]"></a>io__rcc_gpio_en_bit</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, io.o(.text.io__rcc_gpio_en_bit))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
-</UL>
-
-<P><STRONG><a name="[5c]"></a>led_init</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, main.o(.text.led_init))
+<P><STRONG><a name="[5e]"></a>led_init</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, main.o(.text.led_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = led_init &rArr; io_init_simple &rArr; io_config_ex_raw &rArr; io_config_raw
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
->>>>>>> Stashed changes
+<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_init_simple
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_enable_port_clock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[5b]"></a>scope_mark_low_both_us</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(.text.scope_mark_low_both_us))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = scope_mark_low_both_us
+<P><STRONG><a name="[63]"></a>run_test_send_byte_a4_once</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, main.o(.text.run_test_send_byte_a4_once))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = run_test_send_byte_a4_once &rArr; ENVOI_OCTET_ONEWIRE &rArr; ENVOI_BIT_ONEWIRE &rArr; init_motif
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
-=======
-<P><STRONG><a name="[5d]"></a>led_set</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, main.o(.text.led_set))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = led_set
-</UL>
-<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;io_write
-</UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_test_reset_once
-</UL>
-
-<P><STRONG><a name="[61]"></a>run_test_reset_once</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, main.o(.text.run_test_reset_once))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = run_test_reset_once &rArr; RESET_ONEWIRE &rArr; init_motif
-</UL>
-<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_set
+<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_ONEWIRE
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ENVOI_OCTET_ONEWIRE
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial2_puts
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[60]"></a>scope_mark_high_both_us</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(.text.scope_mark_high_both_us))
+<P><STRONG><a name="[62]"></a>scope_mark_high_both_us</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(.text.scope_mark_high_both_us))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = scope_mark_high_both_us
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
@@ -872,46 +674,38 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5f]"></a>scope_mark_low_both_us</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(.text.scope_mark_low_both_us))
+<P><STRONG><a name="[61]"></a>scope_mark_low_both_us</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(.text.scope_mark_low_both_us))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = scope_mark_low_both_us
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
->>>>>>> Stashed changes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<<<<<<< Updated upstream
-<P><STRONG><a name="[55]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, onewire.o(.text.__NVIC_EnableIRQ))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer
+<P><STRONG><a name="[53]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, onewire.o(.text.__NVIC_EnableIRQ))
+<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tim3_enable_irq
 </UL>
 
-=======
-<P><STRONG><a name="[51]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, onewire.o(.text.__NVIC_EnableIRQ))
-<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tim3_enable_irq
-</UL>
-
-<P><STRONG><a name="[50]"></a>_tim3_enable_irq</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, onewire.o(.text._tim3_enable_irq))
+<P><STRONG><a name="[52]"></a>_tim3_enable_irq</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, onewire.o(.text._tim3_enable_irq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _tim3_enable_irq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer
 </UL>
 
->>>>>>> Stashed changes
-<P><STRONG><a name="[4e]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(.text.SetSysClock))
+<P><STRONG><a name="[50]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(.text.SetSysClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[4f]"></a>SetSysClockTo72</STRONG> (Thumb, 190 bytes, Stack size 8 bytes, system_stm32f10x.o(.text.SetSysClockTo72))
+<P><STRONG><a name="[51]"></a>SetSysClockTo72</STRONG> (Thumb, 190 bytes, Stack size 8 bytes, system_stm32f10x.o(.text.SetSysClockTo72))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SetSysClockTo72
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 <P>
 <H3>
