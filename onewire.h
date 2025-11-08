@@ -9,6 +9,20 @@
 #define ONEWIRE_DQ_PIN    4u   /* SIGNAL ONEWIRE  (TIM3_CH1 futuramente) */
 #define ONEWIRE_SPY_PIN   5u   /* SIGNAL ESPION_INSTANT_LECTURE (TIM3_CH2 futuramente) */
 
+/* -------- tempos em µs (ajuste se o prof pedir outros) -------- */
+
+/* Reset + presence */
+#define OW_RESET_TLOW      480u   /* master mantém DQ LOW         */
+#define OW_RESET_TSAMPLE   550u   /* instante para amostrar presença */
+#define OW_RESET_TEND      960u   /* fim do motivo                */
+
+/* Slots de escrita/leitura */
+#define OW_SLOT_TLOW_1     6u     /* master LOW curto para '1'    */
+#define OW_SLOT_TLOW_0     60u    /* master LOW longo para '0'    */
+#define OW_SLOT_TSAMPLE    15u    /* amostragem no meio do slot   */
+#define OW_SLOT_TEND       60u    /* tamanho total do slot        */
+
+
 /* 2.1 — Configuração dos pinos:
  * - PB4 (DQ): AF Open-Drain (linha 1-Wire, pull-up externo)
  * - PB5 (Espion): Saída Push-Pull, inicia em nível alto
@@ -49,6 +63,15 @@ void onewire_clear_flags(void);
 void onewire_wait_espion_done(void);
 void onewire_wait_motif_done(void);
 void onewire_clear_flags(void);
+
+/* 2.4 — Fonctions élémentaires bloquantes OneWire */
+void RESET_ONEWIRE(void);
+void ENVOI_BIT_ONEWIRE(uint8_t bit_a_envoyer);
+uint8_t LECTURE_BIT_ONEWIRE(void);
+
+void ENVOI_OCTET_ONEWIRE(uint8_t octet);
+uint8_t LECTURE_OCTET_ONEWIRE(void);
+
 
 /* -------------------- Interrupt handler -------------------- */
 /* Handles TIM3 CC interrupts (CC2 = D2 end, CC3 = D3 end) */

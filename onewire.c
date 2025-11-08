@@ -145,6 +145,83 @@ void onewire_clear_flags(void)
     motif_one_wire_fini = 0;
 }
 
+/* ============================================================
+ * 2.4 — Fonctions élémentaires bloquantes
+ * ============================================================ */
+
+/* Reset + detection de présence
+ * - Gera o pulso de reset
+ * - ISR mede etat_one_wire em OW_RESET_TSAMPLE
+ * - Espera fim do motivo e aguarda mais 1 ms
+ */
+void RESET_ONEWIRE(void)
+{
+    onewire_clear_flags();
+
+    init_motif(OW_RESET_TLOW, OW_RESET_TSAMPLE, OW_RESET_TEND);
+    onewire_wait_motif_done();   /* bloqueia até CC3 (fim D3) */
+
+    /* intervalo mínimo entre resets (~1 ms) */
+    delay_ms(1);
+}
+
+/* Envio de um único bit (1 ou 0) */
+void ENVOI_BIT_ONEWIRE(uint8_t bit_a_envoyer)
+{
+    uint16_t t_low = (bit_a_envoyer ? OW_SLOT_TLOW_1 : OW_SLOT_TLOW_0);
+
+    onewire_clear_flags();
+
+    /* D1 = duração LOW; D2 = instante de amostragem; D3 = fim do slot */
+    init_motif(t_low, OW_SLOT_TSAMPLE, OW_SLOT_TEND);
+    onewire_wait_motif_done();
+
+    /* tempo de recuperação entre slots */
+    delay_ms(1);
+}
+
+/* Leitura de um bit (retorna 0 ou 1) */
+uint8_t LECTURE_BIT_ONEWIRE(void)
+{
+    onewire_clear_flags();
+
+    /* Slot de leitura: LOW curtinho e amostragem no meio do slot */
+    init_motif(OW_SLOT_TLOW_1, OW_SLOT_TSAMPLE, OW_SLOT_TEND);
+    onewire_wait_motif_done();
+
+    /* etat_one_wire foi atualizado na IT de CC2 (D2) */
+    uint8_t bit_lu = (etat_one_wire ? 1u : 0u);
+
+    delay_ms(1);
+    return bit_lu;
+}
+
+/* Envio de um octeto (LSB first) */
+void ENVOI_OCTET_ONEWIRE(uint8_t octet)
+{
+    for (uint8_t i = 0; i < 8; i++) {
+        uint8_t bit = (octet & 0x01u);  /* LSB primeiro */
+        ENVOI_BIT_ONEWIRE(bit);
+        octet >>= 1;
+    }
+}
+
+/* Leitura de um octeto (LSB first) */
+uint8_t LECTURE_OCTET_ONEWIRE(void)
+{
+    uint8_t octet = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        uint8_t bit = LECTURE_BIT_ONEWIRE();
+        octet >>= 1;
+        if (bit) {
+            octet |= 0x80u;     /* monta LSB first no sentido standard */
+        }
+    }
+    return octet;
+}
+
+
 /* -------------------- TIM3 ISR -------------------- */
 void TIM3_IRQHandler(void)
 {
