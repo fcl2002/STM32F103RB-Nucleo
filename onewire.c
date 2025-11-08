@@ -102,7 +102,7 @@ void init_timer(void)
     TIM3->CCMR1 = (TIM3->CCMR1 & ~(7u<<4))  | (0u<<4);   /* OC1M=frozen */
 
     /* CH2 (ESPION): queremos HIGH em repouso => force active (101) e conectar */
-    TIM3->CCMR1 = (TIM3->CCMR1 & ~(7u<<12)) | (5u<<12);  /* OC2M=101 */
+    TIM3->CCMR1 = (TIM3->CCMR1 & ~(7u<<12)) | (4u<<12);  /* OC2M=101 */
     TIM3->CCER  |= TIM_CCER_CC2E;                        /* conecta CH2 */
     TIM3->EGR    = TIM_EGR_UG;                           /* aplica HIGH já */
 
@@ -131,7 +131,7 @@ void init_motif(uint16_t D1_us, uint16_t D2_us, uint16_t D3_us)
        - ESPION HIGH (OC2M=101)
     */
     TIM3->CCMR1 = (TIM3->CCMR1 & ~(7u<<4))  | (4u<<4);   /* CH1 force LOW  */
-    TIM3->CCMR1 = (TIM3->CCMR1 & ~(7u<<12)) | (5u<<12);  /* CH2 force HIGH */
+    TIM3->CCMR1 = (TIM3->CCMR1 & ~(7u<<12)) | (4u<<12);  /* CH2 force HIGH */
 
     TIM3->CCER |=  TIM_CCER_CC1E;   /* conecta DQ */
     TIM3->EGR   =  TIM_EGR_UG;      /* aplica níveis já */
