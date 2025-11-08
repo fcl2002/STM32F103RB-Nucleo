@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.31.0.0
 Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Fernando Lasmar, Sorbonne, LIC=----
+License Information: Matheus Galdino, UNIFEI, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.31.0.0
@@ -21,14 +21,15 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
 Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
-C:\Micro_TPs\STM32F103RB-Nucleo\STM32F103RB-Nucleo.uvprojx
-Project File Date:  11/08/2025
+D:\EI\EI7\Microcontroleur_2\TP\TP_GIT\STM32F103RB-Nucleo\STM32F103RB-Nucleo.uvprojx
+Project File Date:  11/06/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
 compiling delay.c...
 compiling serial.c...
+<<<<<<< Updated upstream
 pcf8574.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     ack1 = i2cbb_write_byte((uint8_t)((addr7 << 1) | 0u)); /* bit R/W = 0 (write) */
                                        ~~~~~~^~~~  ~
@@ -56,6 +57,8 @@ static inline void _tim3_disable_irq(void) {
 5 warnings generated.
 compiling onewire.c...
 compiling i2c_bb.c...
+=======
+>>>>>>> Stashed changes
 io.c(34): warning: enumeration value 'IO_SPEED_50M' not explicitly handled in switch [-Wswitch-enum]
     switch (speed) {
             ^
@@ -67,6 +70,37 @@ io.c(137): warning: default label in switch which covers all enumeration values 
     ^
 3 warnings generated.
 compiling io.c...
+<<<<<<< Updated upstream
+=======
+compiling i2c_bb.c...
+pcf8574.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    ack1 = i2cbb_write_byte((uint8_t)((addr7 << 1) | 0u)); /* bit R/W = 0 (write) */
+                                       ~~~~~~^~~~  ~
+pcf8574.c(26): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    ack_addr = i2cbb_write_byte((uint8_t)((addr7 << 1) | 1u)); /* bit R/W = 1 (read) */
+                                           ~~~~~~^~~~  ~
+2 warnings generated.
+compiling pcf8574.c...
+onewire.c(206): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+onewire.c(10): warning: unused function '_tim3_disable_irq' [-Wunused-function]
+static inline void _tim3_disable_irq(void) { NVIC_DisableIRQ(TIM3_IRQn); }
+                   ^
+2 warnings generated.
+compiling onewire.c...
+main.c(63): warning: unused function 'run_test_write1_once' [-Wunused-function]
+static void run_test_write1_once(void) {
+            ^
+main.c(69): warning: unused function 'run_test_write0_once' [-Wunused-function]
+static void run_test_write0_once(void) {
+            ^
+main.c(75): warning: unused function 'run_test_read_once' [-Wunused-function]
+static void run_test_read_once(void) {
+            ^
+3 warnings generated.
+compiling main.c...
+>>>>>>> Stashed changes
 assembling startup_stm32f10x_md.s...
 RTE/Device/STM32F103R8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
 __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
@@ -77,7 +111,11 @@ __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9}
 1 warning generated.
 compiling system_stm32f10x.c...
 linking...
+<<<<<<< Updated upstream
 Program Size: Code=1996 RO-data=268 RW-data=4 ZI-data=1640  
+=======
+Program Size: Code=2060 RO-data=268 RW-data=4 ZI-data=1640  
+>>>>>>> Stashed changes
 ".\Objects\STM32F103RB-Nucleo.axf" - 0 Error(s), 11 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -97,19 +135,19 @@ Package Vendor: Keil
 <h2>Collection of Component include folders:</h2>
   .\RTE\Device\STM32F103R8
   .\RTE\_Target_1
-  C:\Users\ferna\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
-  C:\Users\ferna\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+  C:\Users\Matheus\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Matheus\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

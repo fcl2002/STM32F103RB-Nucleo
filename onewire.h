@@ -77,4 +77,9 @@ uint8_t LECTURE_OCTET_ONEWIRE(void);
 /* Handles TIM3 CC interrupts (CC2 = D2 end, CC3 = D3 end) */
 void TIM3_IRQHandler(void);
 
+/* ---- 2.4: primitivas bloqueantes para testes ---- */
+void RESET_ONEWIRE(void);
+void ENVOI_BIT_ONEWIRE(uint8_t bit_a_envoyer);
+uint8_t LECTURE_BIT_ONEWIRE(void);
+
 #endif /* ONEWIRE_H */
