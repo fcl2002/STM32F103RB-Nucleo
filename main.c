@@ -48,16 +48,22 @@ int main(void)
         onewire_wait_motif_done();
         delay_us(20);  /* espaçamento entre motivos */
 
+        if (etat_one_wire == 0) {
+            // presence detectado (linha estava LOW em D2)
+        } else {
+            // ausência de presença (linha HIGH em D2)
+        }
+
         /* ------------------------- 2) WRITE '1' ------------------------- */
         /* DQ LOW 6 µs; leitura 15 µs; slot termina em 60 µs */
-        init_motif(/*D1=*/6, /*D2=*/15, /*D3=*/60);
-        onewire_wait_motif_done();
-        delay_us(40);  /* espaçamento entre slots */
+        // init_motif(/*D1=*/6, /*D2=*/15, /*D3=*/60);
+        // onewire_wait_motif_done();
+        // delay_us(40);  /* espaçamento entre slots */
 
         /* ------------------------- 3) WRITE '0' ------------------------- */
         /* DQ LOW 60 µs; leitura 15 µs; slot termina em 60 µs */
-        init_motif(/*D1=*/60, /*D2=*/15, /*D3=*/60);
-        onewire_wait_motif_done();
+        // init_motif(/*D1=*/60, /*D2=*/15, /*D3=*/60);
+        // onewire_wait_motif_done();
 
         /* Pausa “humana” para nova captura */
         delay_ms(5);

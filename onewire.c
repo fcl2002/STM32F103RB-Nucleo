@@ -1,8 +1,12 @@
 #include "onewire.h"
 
 /* -------------------- state flags -------------------- */
-volatile uint8_t g_espion_done = 0;
-volatile uint8_t g_motif_done  = 0;
+// volatile uint8_t g_espion_done = 0;
+// volatile uint8_t g_motif_done  = 0;
+
+/* -------------------- state flags -------------------- */
+volatile uint8_t etat_one_wire       = 1;  /* linha repouso em HIGH (pull-up)   */
+volatile uint8_t motif_one_wire_fini = 0;  /* 0 = em curso, 1 = terminado      */
 
 /* -------------------- helpers -------------------- */
 static inline void _tim3_enable_irq(void) {
@@ -42,37 +46,6 @@ void init_pins_onewire(void)
 
 
 /* -------------------- init common timer base -------------------- */
-// void init_timer(void)
-// {
-//     RCC->APB2ENR |= (1u << 0);   /* AFIOEN */
-//     RCC->APB1ENR |= (1u << 1);   /* TIM3EN */
-
-//     AFIO->MAPR = (AFIO->MAPR & ~(3u << 10)) | (1u << 10); /* TIM3_REMAP = 01 */
-
-//     TIM3->PSC = TIM3_PSC_1US;
-//     TIM3->ARR = 0xFFFFu;
-
-//     TIM3->CR1  = 0;
-//     TIM3->DIER = 0;
-//     TIM3->SR   = 0;
-
-//     TIM3->CCER = 0; /* CC1E=0, CC2E=0 */
-
-//     /* >>> CH1/CH2 em modo SAÍDA (CCxS=00) <<< */
-//     TIM3->CCMR1 &= ~((3u<<0) | (3u<<8)); /* CC1S=00, CC2S=00 */
-
-//     /* CH1 (DQ): manter desconectado fora do motivo (frozen é OK) */
-//     TIM3->CCMR1 = (TIM3->CCMR1 & ~(7u<<4))  | (0u<<4);   /* OC1M=frozen */
-
-//     /* CH2 (ESPION): HIGH de repouso => force active (101) e conectar */
-//     TIM3->CCMR1 = (TIM3->CCMR1 & ~(7u<<12)) | (5u<<12);  /* OC2M=101 */
-//     TIM3->CCER  |= TIM_CCER_CC2E;                        /* conecta CH2 */
-//     TIM3->EGR    = TIM_EGR_UG;                           /* aplica HIGH já */
-
-//     TIM3->DIER |= (TIM_DIER_CC2IE | TIM_DIER_CC3IE);
-//     NVIC_EnableIRQ(TIM3_IRQn);
-// }
-
 void init_timer(void)
 {
     RCC->APB2ENR |= (1u << 0);   /* AFIOEN */
@@ -117,8 +90,10 @@ void init_timer(void)
 /* -------------------- program & start a motif -------------------- */
 void init_motif(uint16_t D1_us, uint16_t D2_us, uint16_t D3_us)
 {
-    g_espion_done = 0;
-    g_motif_done  = 0;
+    // g_espion_done = 0;
+    // g_motif_done  = 0;
+
+    motif_one_wire_fini = 0;
 
     TIM3->CR1  &= ~TIM_CR1_CEN;      /* para timer */
     TIM3->CCER &= ~TIM_CCER_CC1E;    /* DQ desconectado (repouso via pull-up) */
@@ -152,20 +127,22 @@ void init_motif(uint16_t D1_us, uint16_t D2_us, uint16_t D3_us)
 
 
 /* -------------------- waits & flags -------------------- */
-void onewire_wait_espion_done(void)
-{
-    while (!g_espion_done) { /* busy wait */ }
-}
+// void onewire_wait_espion_done(void)
+// {
+//     while (!g_espion_done) { /* busy wait */ }
+// }
 
 void onewire_wait_motif_done(void)
 {
-    while (!g_motif_done) { /* busy wait */ }
+    // while (!g_motif_done) { /* busy wait */ }
+    while (!motif_one_wire_fini) { /* busy wait */ }
 }
 
 void onewire_clear_flags(void)
 {
-    g_espion_done = 0;
-    g_motif_done  = 0;
+    // g_espion_done = 0;
+    // g_motif_done  = 0;
+    motif_one_wire_fini = 0;
 }
 
 /* -------------------- TIM3 ISR -------------------- */
@@ -175,12 +152,17 @@ void TIM3_IRQHandler(void)
 
     if (sr & TIM_SR_CC2IF) {
         TIM3->SR &= ~TIM_SR_CC2IF;
-        g_espion_done = 1;
+        // g_espion_done = 1;
+
+        /* Lire l’état de la patte SIGNAL ONE WIRE (PB4 / DQ) */
+        etat_one_wire = (ONEWIRE_GPIO->IDR & (1u << ONEWIRE_DQ_PIN)) ? 1u : 0u;
     }
 
     if (sr & TIM_SR_CC3IF) {
         TIM3->SR &= ~TIM_SR_CC3IF;
-        g_motif_done = 1;
+        // g_motif_done = 1;
+
+        motif_one_wire_fini = 1; /* lever le sémaphore */
 
         /* Para timer */
         TIM3->CR1 &= ~TIM_CR1_CEN;

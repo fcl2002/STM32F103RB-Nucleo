@@ -38,6 +38,14 @@ void init_motif(uint16_t D1_us, uint16_t D2_us, uint16_t D3_us);
 extern volatile uint8_t g_espion_done;  /* set at end of D2 (TIM3 CC2) */
 extern volatile uint8_t g_motif_done;   /* set at end of D3 (TIM3 CC3) */
 
+/* 2.3 — variables de protocole */
+extern volatile uint8_t etat_one_wire;        /* valeur lue sur la ligne DQ à l’instant D2 */
+extern volatile uint8_t motif_one_wire_fini;  /* sémaphore: motif terminé (D3 atteint) */
+
+/* helpers de “espera bloqueante” (facilitam os testes no main) */
+void onewire_wait_motif_done(void);
+void onewire_clear_flags(void);
+
 void onewire_wait_espion_done(void);
 void onewire_wait_motif_done(void);
 void onewire_clear_flags(void);
